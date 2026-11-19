@@ -1,6 +1,6 @@
 # Local AI Agent Environment: OpenClaw + Ollama on WSL
 
-A personal project (Apr 2026 – May 2026) where I set up and tested the **OpenClaw** AI agent inside **Windows Subsystem for Linux (WSL)**, using **ChatGPT** as the model for OpenClaw and running local large language models with **Ollama** on CPU-only hardware.
+A personal project (Apr 2026 – May 2026) where I set up and tested the **OpenClaw** AI agent inside **Windows Subsystem for Linux (WSL)**, using **ChatGPT** as the model for OpenClaw and running local large language models with **Ollama**. I ran it on a separate PC that I built myself from parts (Intel Core i5, 32 GB RAM, CPU-only).
 
 ## Overview
 
@@ -16,13 +16,13 @@ I installed and configured the stack, worked through setup and authentication pr
 | AI agent | OpenClaw |
 | Model used with OpenClaw | ChatGPT |
 | Local inference engine | Ollama (local models) |
-| Hardware | Intel Core i5, 32 GB RAM, CPU-only (no dedicated GPU) |
+| Hardware | Self-built test PC: Intel Core i5, 32 GB RAM, CPU-only (no dedicated GPU) |
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    W[Windows host] --> L[WSL Linux environment]
+    W[Self-built PC: Windows host<br/>i5, 32 GB RAM, CPU-only] --> L[WSL Linux environment]
     L --> OC[OpenClaw agent]
     OC -- prompts --> GPT[ChatGPT]
     L --> OL[Ollama runtime<br/>local models, CPU inference]
@@ -32,7 +32,7 @@ flowchart LR
 Text version:
 
 ```
-Windows host -> WSL -> OpenClaw (agent) <-> ChatGPT
+Self-built PC (Windows host) -> WSL -> OpenClaw (agent) <-> ChatGPT
                    \-> Ollama (local models, CPU inference)
 ```
 
@@ -68,10 +68,17 @@ After testing, I chose to reclaim system resources with a complete teardown:
 
 If I revisit local or agent-based AI tools, I would move heavy model inference off the CPU, either to dedicated GPU hardware or to lightweight API endpoints, to avoid the WSL CPU bottleneck.
 
+## References
+
+I followed and adapted this public tutorial. It installs OpenClaw on a Linux VPS; I adapted the setup to run in WSL on my own PC. The video is credited as a learning resource only.
+
+- [OpenClaw......RIGHT NOW??? (it's not what you think)](https://youtu.be/T-HZHO_PQPY) by NetworkChuck
+
 ## Screenshots
 
 _Placeholders. I'll add these later (with any keys, tokens, and usernames removed):_
 
+- [ ] The test PC I built (photo of the hardware)
 - [ ] Ollama running a local model in WSL
 - [ ] OpenClaw setup / agent run
 - [ ] CPU and memory usage during a test run
