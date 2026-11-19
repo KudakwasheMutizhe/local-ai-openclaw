@@ -74,15 +74,6 @@ I followed and adapted this public tutorial. It installs OpenClaw on a Linux VPS
 
 - [OpenClaw......RIGHT NOW??? (it's not what you think)](https://youtu.be/T-HZHO_PQPY) by NetworkChuck
 
-## Screenshots
-
-_Placeholders. I'll add these later (with any keys, tokens, and usernames removed):_
-
-- [ ] The test PC I built (photo of the hardware)
-- [ ] Ollama running a local model in WSL
-- [ ] OpenClaw setup / agent run
-- [ ] CPU and memory usage during a test run
-
 ---
 
 ## Setup Guide: Run OpenClaw with Local Models in WSL
